@@ -132,7 +132,16 @@
             "linkButton": "Злучыць зараз",
             "cancelButton": "Не злучаць"
         },
-        "emailNotice": "Сьцьвярдзіце вашу пошту, каб адпраўляць паведамленьні."
+        "emailNotice": "Сьцьвярдзіце вашу пошту, каб адпраўляць паведамленьні.",
+        "gifPicker": {
+            "search": "Пошук праз {{platform}}",
+            "noResults": "GIF-відарысаў ня знойдзена",
+            "favorites": {
+                "title": "Абраныя",
+                "search": "Пошук празь абраныя",
+                "noFavorites": "Абраных пакуль што няма"
+            }
+        }
     },
     "inbox": {
         "blockedUsersModal": {
