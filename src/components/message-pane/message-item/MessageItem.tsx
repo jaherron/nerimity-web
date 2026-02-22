@@ -1448,7 +1448,7 @@ export function ServerInviteEmbed(props: {
   emojiId?: string;
 }) {
   const navigate = useNavigate();
-  const { servers } = useStore();
+  const { servers, serverMembers } = useStore();
   const [t] = useTransContext();
   const [invite, setInvite] = createSignal<
     ServerWithMemberCount | null | false
@@ -1461,6 +1461,21 @@ export function ServerInviteEmbed(props: {
     : props.emojiId ? `emoji/${props.emojiId}` : "";
 
   const serverDetailsByEmoji = async (emojiId: string) => {
+    const cachedEmoji = servers
+      .emojisUpdatedDupName()
+      .find((e) => e.id === props.emojiId);
+
+    const serverId = cachedEmoji?.serverId;
+    if (serverId) {
+      const server = servers.get(serverId)
+      if (server) {
+        return {
+          memberCount: (serverMembers.array(serverId) || []).length,
+          ...server
+        };
+      }
+    }
+
     const exploreItem = await publicServerByEmojiId(emojiId).catch(() => {});
     if (exploreItem && exploreItem.server) {
       return {
