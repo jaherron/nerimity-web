@@ -509,7 +509,17 @@
             "pushToTalk": "По нажатию клавиши",
             "bindButton": "Привязать",
             "stopButton": "Остановить",
-            "downloadAppNotice": "Скачайте Nerimity на ПК, чтобы использовать эту функцию без фокусировки на вкладке."
+            "downloadAppNotice": "Скачайте Nerimity на ПК, чтобы использовать эту функцию без фокусировки на вкладке.",
+            "inputConstraints": {
+                "echoCancelation": "Подавление эха",
+                "echoCancelationDescription": "Предотвращает улавливание микрофоном звуков из динамиков.",
+                "noiseSuppression": "Шумоподавление",
+                "noiseSuppressionDescription": "Отфильтровывает постоянный фоновый шум (вентиляторы, гудение).",
+                "autoGainControl": "Автоматическая регулировка громкости",
+                "autoGainControlDescription": "Автоматически регулирует уровень громкости для поддержания стабильного сигнала."
+            },
+            "useTurn": "Использование TURN-серверов Cloudflare",
+            "useTurnDescription": "Использует TURN-серверы для лучшего соединения"
         },
         "connections": {
             "thirdParty": {
@@ -897,7 +907,16 @@
             "linkButton": "Привязать сейчас",
             "cancelButton": "Не привязывать"
         },
-        "emailNotice": "Подтвердите ваш электронный адрес, чтобы отправлять сообщения."
+        "emailNotice": "Подтвердите ваш электронный адрес, чтобы отправлять сообщения.",
+        "gifPicker": {
+            "search": "Поиск {{platform}}",
+            "noResults": "Никаких GIF-изображений не найдено",
+            "favorites": {
+                "title": "Избранные",
+                "search": "Поиск среди избранных",
+                "noFavorites": "Избранных пока нет"
+            }
+        }
     },
     "inputFieldActions": {
         "copy": "Скопировать",
