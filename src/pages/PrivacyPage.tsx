@@ -49,22 +49,23 @@ export default function PrivacyPage() {
         <CenterContainer>
           <InformationContainer>
             <Title>Nerimity Privacy Policy</Title>
-            <Text opacity={0.6} size={14}>
-              Last updated: 20 February 2026
+            <Text opacity={0.8} size={14}>
+              Last updated: 20 February 2026{" "}
+              <a
+                href="https://github.com/Nerimity/nerimity-web/commits/main/src/pages/PrivacyPage.tsx"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View policy history
+              </a>
             </Text>
-            <CustomLink
-              decoration
-              href="https://github.com/Nerimity/nerimity-web/commits/main/src/pages/PrivacyPage.tsx"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View policy history
-            </CustomLink>
-            <Text opacity={0.8} size={16}>
-              If you find something missing or have any questions, email us at
-              nerimityapp@gmail.com.
+            <Text opacity={0.6} size={14}>
+              If you have questions or notice something missing, you may email
+              us at{" "}
+              <a href="mailto:nerimityapp@gmail.com">nerimityapp@gmail.com</a>.
             </Text>
           </InformationContainer>
+
           <Block title="Data We Store Automatically" icon="storage">
             When registering an account on Nerimity and using its services, we
             store some information. The information we store may include but not
@@ -161,7 +162,11 @@ const TitleWithIcon = styled("div")`
   margin-bottom: 10px;
 `;
 
-function Block(props: { title: string; icon?: string; children: JSXElement }) {
+function Block(props: {
+  title: string;
+  icon?: string;
+  children: JSXElement
+}) {
   return (
     <BlockContainer>
       <TitleWithIcon>
