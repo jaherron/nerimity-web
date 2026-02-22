@@ -142,7 +142,7 @@ export default function TermsAndConditionsPage() {
             a comfortable environment to learn and have fun in.
           </Block>
 
-          <Block title="5. Links" icon="link_2">
+          <Block title="5. Links" icon="link">
             Nerimity has not reviewed all sites connected to its Website and is
             not responsible for their contents. The presence of any link does
             not imply endorsement by Nerimity of the site. Any linked website is
@@ -171,7 +171,7 @@ export default function TermsAndConditionsPage() {
             It does not represent any sites linked to this Website.
           </Block>
 
-          <Block title="8. Limitations" icon="shield_locked">
+          <Block title="8. Limitations" icon="lock">
             Nerimity or its suppliers will not be held accountable for any
             damages that arise from the use or inability to use the materials on
             Nerimity's Website. This is even if Nerimity or an authorised
@@ -189,7 +189,7 @@ export default function TermsAndConditionsPage() {
             guarantee any updates.
           </Block>
 
-          <Block title="10. Your Privacy" icon="lock">
+          <Block title="10. Your Privacy" icon="shield_locked">
             Please read our{" "}
             <CustomLink decoration href="/privacy">
               Privacy Policy.
