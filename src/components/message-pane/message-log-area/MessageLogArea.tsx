@@ -1158,7 +1158,7 @@ const MessageReactHeader = (props: {
     const unicode = emojiShortcodeToUnicode(shortcode);
     const icon =
       unicode ||
-      (customEmoji && `${customEmoji.id}.${customEmoji.gif ? "gif" : "webp"}`);
+      (customEmoji && `${customEmoji.id}.${customEmoji.gif ? (customEmoji.webp ? "webp#a" : "gif") : "webp"}`);
     return icon;
   };
 
