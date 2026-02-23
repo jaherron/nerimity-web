@@ -149,15 +149,11 @@ const MemberItem = (props: {
         />
         <div class={styles.memberInfo}>
           <div
-            class={styles.username}
+            class={cn(styles.username, font()?.class)}
             style={{
               "--gradient":
                 topRoleWithColor()?.gradient || topRoleWithColor()?.hexColor,
-              "--color": topRoleWithColor()?.hexColor!,
-              "--font": `'${font()?.name}'`,
-              "--lh": font()?.lineHeight,
-              "--ls": font()?.letterSpacing,
-              "--scale": font()?.scale
+              "--color": topRoleWithColor()?.hexColor!
             }}
           >
             {props.member.nickname || user().username}
