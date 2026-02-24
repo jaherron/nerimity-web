@@ -169,6 +169,8 @@ const DesktopProfileFlyout = (props: {
   const { isMobileWidth } = useWindowProperties();
   const [customStatus, setCustomStatus] = createSignal("");
 
+  const navigate = useNavigate();
+
   const isMobileWidthMemo = createMemo(() => isMobileWidth());
   createEffect(
     on(
@@ -373,7 +375,21 @@ const DesktopProfileFlyout = (props: {
           animate={!props.dmPane ? true : hover()}
           hexColor={user()?.hexColor}
           url={bannerUrl(user()!)}
-        />
+        >
+          <Show when={isMe() && !props.showProfileSettings}>
+            <Button
+              padding={4}
+              textSize={12}
+              iconSize={18}
+              onClick={() => navigate("/app/settings/account")}
+              color={colors().primary}
+              label={t("profile.personal.editProfile")}
+              class={styles.bannerButton}
+              iconName="edit"
+              margin={0}
+            />
+          </Show>
+        </Banner>
         <div class={styles.flyoutDetailsContainer}>
           <CustomLink
             href={RouterEndpoints.PROFILE(props.userId)}
