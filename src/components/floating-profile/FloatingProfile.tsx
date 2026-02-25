@@ -400,14 +400,8 @@ const DesktopProfileFlyout = (props: {
                 href={RouterEndpoints.PROFILE(props.userId)}
               >
                 <Text
-                  style={{
-                    "overflow-wrap": "anywhere",
-                    "--font": `'${font()?.name}'`,
-                    "--lh": font()?.lineHeight,
-                    "--scale": font()?.scale,
-                    "--ls": font()?.letterSpacing
-                  }}
-                  class={styles.username}
+                  style={{ "overflow-wrap": "anywhere" }}
+                  class={cn(styles.username, font()?.class)}
                 >
                   {user()!.username}
                 </Text>

@@ -262,7 +262,11 @@ const Details = (props: DetailsProps) => {
           userDetailsPreloader.preload(props.message.createdBy.id);
         }}
         onContextMenu={props.userContextMenu}
-        class={classNames("trigger-profile-flyout", styles.username)}
+        class={classNames(
+          "trigger-profile-flyout",
+          styles.username,
+          font()?.class,
+        )}
         href={
           props.message.webhookId
             ? "#"
@@ -271,11 +275,7 @@ const Details = (props: DetailsProps) => {
         style={{
           "--gradient":
             topRoleWithColor()?.gradient || topRoleWithColor()?.hexColor,
-          "--color": topRoleWithColor()?.hexColor!,
-          "--font": `'${font()?.name}'`,
-          "--lh": font()?.lineHeight,
-          "--ls": font()?.letterSpacing,
-          "--scale": font()?.scale
+          "--color": topRoleWithColor()?.hexColor!
         }}
       >
         {props.serverMember?.nickname || props.message.createdBy.username}
